@@ -65,6 +65,7 @@ static const char *textcmd[]  = { "st", "vim", NULL };
 static const char *mailcmd[]  = { "st", "neomutt", NULL };
 static const char *irccmd[]   = { "st", "weechat", NULL };
 static const char *emojicmd[] = { "./scripts/unicode", NULL };
+static const char *newscmd[]  = { "st", "newsboat", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -75,6 +76,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_s,	   spawn,	   {.v = textcmd } },
 	{ MODKEY,			XK_e,	   spawn,	   {.v = mailcmd } },
 	{ MODKEY,			XK_u,	   spawn,	   {.v = emojicmd } },
+	{ MODKEY,			XK_n,	   spawn,	   {.v = newscmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
